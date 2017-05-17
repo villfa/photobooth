@@ -222,7 +222,8 @@ if __name__ == "__main__":
     
     gpio_pin = 4
 
-    import RPIO
+    import RPi.GPIO as RPIO
+    RPIO.setmode(RPIO.BCM);
     RPIO.setup(gpio_pin, RPIO.IN, pull_up_down=RPIO.PUD_UP)
 
     photoboothLoop(gpio_pin)
