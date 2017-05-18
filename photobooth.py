@@ -15,6 +15,7 @@ import errno
 IDLE, TAKING_PICS, SHOWING_PIC = range(3)
 global state
 state = IDLE
+STORAGE_PATH = "/media/disk/Photobooth_images/"
 PIC_DELAY = 3 # time in secs to delay
 SHOW_TIME = 5 # time in secs to show photo
 NO_OF_PICS = 3 # number of pics on each strip
@@ -130,7 +131,7 @@ def photoboothLoop(gpio_pin):
     picCount = 0
     lastPicTime = 0
     filenames = []
-    dirname = "/media/disk/Photobooth_images/"
+    dirname = STORAGE_PATH
     newDir = dirname
     imgToShow = readImgFromCamera(camera)
     img = imgToShow
