@@ -174,7 +174,7 @@ def photoboothLoop(gpio_pin):
                     screen.blit(img, ((xSize - img.get_width() ) / 2, (ySize - img.get_height()) / 2))
                     addTextOnTop(screen, imageDir + 'preparing.png')
                     pygame.display.update()
-                    imgToShow = createBMPforPrinting(filenames, newDir + '/' + "photostrip.bmp")
+                    #imgToShow = createBMPforPrinting(filenames, newDir + '/' + "photostrip.bmp")
                     filenames = []
                     nextState = IDLE
                     state = SHOWING_PIC
@@ -184,6 +184,7 @@ def photoboothLoop(gpio_pin):
                     pygame.display.update()
                     filename = newDir + "/" + 'image' + str(picCount) + '.jpeg'
                     takePicFromCamera(camera, filename)
+                    imgToShow = readImgFromCamera(camera)
                     filenames.append(filename)
                 lastPicTime = time.clock()
             else:
