@@ -152,6 +152,8 @@ def photoboothLoop(gpio_pin):
                         lastPicTime = time.clock()
                         filenames = []
                         nextState = IDLE
+                        newDir = dirname + getNextDirName(dirname)
+                        mkdir_p(newDir)
                         picCount = 0
             #      os.seteuid(0)
             if not RPIO.input(gpio_pin):
