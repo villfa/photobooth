@@ -208,8 +208,8 @@ def photoboothLoop(gpio_pin):
             else:
                 screen.fill((0,0,0))
                 screen.blit(imgToShow, ( 0, 0) ) # (xSize - imgToShow.get_width() ) / 2, (ySize - imgToShow.get_height()) / 2))
-                img = pygame.image.load(imageDir + 'printing_3.png', 'png')
-                screen.blit(img, ((xSize - img.get_width() ), (ySize - img.get_height())))
+                #img = pygame.image.load(imageDir + 'printing_3.png', 'png')
+                #screen.blit(img, ((xSize - img.get_width() ), (ySize - img.get_height())))
         else:
             print "UNKNOWN STATE! back to IDLE"
             state = IDLE
