@@ -64,7 +64,7 @@ def takePicFromCamera(camera, filename):
     '''
     oldRes = camera.resolution
     camera.resolution = (2592, 1944) # set to max resolution
-    camera.capture(filename, use_video_port=False, format='jpeg', thumbnail=None)
+    camera.capture(filename, use_video_port=False, format='jpeg', thumbnail=None, quality=100)
     camera.resolution = oldRes
 
 def createBMPforPrinting(filenames, destfile):
