@@ -17,7 +17,7 @@ global state
 state = IDLE
 STORAGE_PATH = "/media/disk/Photobooth_images/"
 PIC_DELAY = 5 # time in secs to delay
-SHOW_TIME = 10 # time in secs to show photo
+SHOW_TIME = 20 # time in secs to show photo
 NO_OF_PICS = 1 # number of pics on each strip
 xSize, ySize = 640, 400
 # global tmp array for low quality streaming
