@@ -115,7 +115,7 @@ def photoboothLoop(gpio_pin):
     atexit.register(camera.close)
     camera.vflip = False
     camera.hflip = False
-    camera.brightness = 60
+    camera.brightness = 55
     camera.resolution = sizeData[1]
     camera.crop       = (0.0, 0.0, 1.0, 1.0) # can focus in for narrower field of view
 
